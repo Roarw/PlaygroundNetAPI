@@ -18,7 +18,7 @@ __dotnet ef__
 
 To commit a database migration:
 
-__dotnet ef migrations 'ProjectName' add InitialCreate__
+__dotnet ef migrations 'ProjectName' add 'CommitName'__
 
 To run a database migration:
 
