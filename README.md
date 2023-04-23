@@ -15,3 +15,11 @@ __dotnet tool update --global dotnet-ef__
 To check for succesful installation you can run:
 
 __dotnet ef__
+
+To commit a database migration:
+
+__dotnet ef migrations 'ProjectName' add InitialCreate__
+
+To run a database migration:
+
+__dotnet ef database update__
