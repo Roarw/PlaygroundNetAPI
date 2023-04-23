@@ -4,4 +4,5 @@
 ![image](https://user-images.githubusercontent.com/8555390/233827379-32c602b3-6523-4433-a0b7-bd96d6bb63b1.png)
 
 ### Database migration:
-If 
+If the database migration tool is not installed yet, install it by opening the package manager and running the command:
+__dotnet tool install --global dotnet-ef__
