@@ -3,7 +3,11 @@ using Microsoft.Extensions.DependencyInjection;
 using PlaygroundNetAPI.Data;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<PlaygroundNetAPIContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("PlaygroundNetAPIContext") ?? throw new InvalidOperationException("Connection string 'PlaygroundNetAPIContext' not found.")));
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("PlaygroundNetAPIContext") ?? throw new InvalidOperationException("Connection string 'PlaygroundNetAPIContext' not found."),
+        options => options.EnableRetryOnFailure(maxRetryCount: 3, maxRetryDelay: System.TimeSpan.FromSeconds(15), errorNumbersToAdd: null)
+    )
+);
 
 // Add services to the container.
 
