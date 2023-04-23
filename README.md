@@ -16,7 +16,7 @@ To check for succesful installation you can run:
 
 __dotnet ef__
 
-To commit a database migration (Make sure to navigate to the ProjectName/ProjectName folder, you can use /ls and /cd):
+To commit a database migration (Make sure to navigate to the ProjectName/ProjectName folder, you can use 'ls' and 'cd'):
 
 __dotnet ef migrations 'ProjectName' add 'CommitName'__
 
