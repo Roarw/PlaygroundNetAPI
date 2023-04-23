@@ -15,5 +15,7 @@ namespace PlaygroundNetAPI.Data
         }
 
         public DbSet<PlaygroundNetAPI.Models.RawIngredient> RawIngredient { get; set; } = default!;
+
+        public DbSet<PlaygroundNetAPI.Models.Recipe>? Recipe { get; set; }
     }
 }
